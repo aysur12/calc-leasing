@@ -36,11 +36,6 @@ const paths = {
     src: './src/assets/fonts/**/*.{ttf,woff,woff2}',
     dist: './dist/assets/fonts/',
     watch: './src/assets/fonts/**/*.{ttf,woff,woff2}'
-  },
-  sprites: {
-    src: './src/sprite/*.svg',
-    dist: './dist/assets/images/',
-    watch: './src/sprite/*.svg'
   }
 };
 
