@@ -1,4 +1,6 @@
 .title {
+  width: 100%;
+  max-width: 753px;
   color: $black;
   @include font-biggest-size;
 }
