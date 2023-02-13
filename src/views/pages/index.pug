@@ -1,7 +1,12 @@
 extends ../layouts/default
 
+include ../../components/title/title
+
 block variables
   - const title= "Leasing calculator";
 
 block content
-  h1 Главная страница 2
+  main.page
+    +title({
+      titleText: "Рассчитайте стоимость автомобиля в лизинг"
+    })
