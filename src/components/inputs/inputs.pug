@@ -1,0 +1,47 @@
+mixin inputs(params = {})
+  -
+    const {
+      labelText="",
+      id="",
+      type= "",
+      name= "",
+      autofocus= false,
+      required= true,
+      disabled= false,
+      value,
+      min,
+      max,
+      spanText= "",
+      percentValue="",
+    } = params;
+
+    const inputNumberAttributes = {
+      type,
+      id,
+      name,
+      placeholder,
+      autofocus,
+      required,
+      disabled,
+      value,
+      min,
+      max,
+    }
+
+  .inputs
+    label(for=id)= labelText
+    .inputs__container
+      .inputs__input-number
+        input.inputs__input&attributes(inputNumberAttributes)
+        if withPercent
+          span.inputs__span= spanText
+        else
+          .inputs__percent= `${percentValue}%`
+      label.inputs__range-label
+        input(
+          type="range"
+          id=rangeId
+          minRange=min
+          maxRange=max
+          valueRange=value
+        )

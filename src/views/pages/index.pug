@@ -1,12 +1,27 @@
 extends ../layouts/default
 
 include ../../components/title/title
+include ../../components/inputs/inputs
 
 block variables
   - const title= "Leasing calculator";
 
 block content
   main.page
-    +title({
-      titleText: "Рассчитайте стоимость автомобиля в лизинг"
-    })
+    .page__title
+      +title({
+        titleText: "Рассчитайте стоимость автомобиля в лизинг"
+      })
+    .page__inputs
+      +inputs({
+        labelText: "Стоимость автомобиля",
+        id: "vehicle-price",
+        type: "number",
+        name: "vehicle-price",
+        autofocus: true,
+        value: "3300000",
+        min: "1500000",
+        max: "10000000",
+        spanText: "₽",
+      })
+
