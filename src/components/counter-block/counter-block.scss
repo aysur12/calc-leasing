@@ -1,0 +1,16 @@
+.counter-block {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  &__title {
+    margin: 0;
+    color: $dark-grey;
+    @include font-small-size;
+  }
+
+  &__value {
+    color: $light-black;
+    @include font-biggest-size;
+  }
+}

@@ -7,4 +7,5 @@ mixin counter-block(params = {})
 
   .counter-block
     h2.counter-block__title= titleText
-    span.counter-block__value= `${value} ₽`
+    span.counter-block__value
+      != `${value} &#8381`
