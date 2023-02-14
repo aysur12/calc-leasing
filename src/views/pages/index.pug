@@ -14,8 +14,8 @@ block content
       +title({
         titleText: "Рассчитайте стоимость автомобиля в лизинг"
       })
-    .page__content  
-      .inputs.inputs_vehicle-price
+    form.page__form
+      .page__inputs.page__inputs_vehicle-price
         +inputs({
           labelText: "Стоимость автомобиля",
           id: "vehicle-price",
@@ -27,7 +27,7 @@ block content
           max: "10000000",
           spanText: "₽",
         })
-      .inputs.inputs_down-payment
+      .page__inputs.page__inputs_down-payment
         +inputs({
           labelText: "Первоначальный взнос",
           id: "down-payment",
@@ -40,7 +40,7 @@ block content
           withPercent: true,
           percentValue: "13",
         })
-      .inputs.inputs_leasing-term
+      .page__inputs.page__inputs_leasing-term
         +inputs({
           labelText: "Срок лизинга",
           id: "leasing-term",
