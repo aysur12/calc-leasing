@@ -1,0 +1,14 @@
+.page {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 47px;
+
+  &__title {
+    margin-top: 216px;
+  }
+
+  &__inputs {
+    display: flex;
+    gap: 32px;
+  }
+}

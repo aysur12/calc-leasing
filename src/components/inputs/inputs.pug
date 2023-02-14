@@ -7,10 +7,10 @@ mixin inputs(params = {})
       name= "",
       autofocus= false,
       required= true,
-      disabled= false,
       value,
       min,
       max,
+      withPercent= false,
       spanText= "",
       percentValue="",
     } = params;
@@ -22,23 +22,25 @@ mixin inputs(params = {})
       placeholder,
       autofocus,
       required,
-      disabled,
       value,
       min,
       max,
     }
 
+    const numberInputWithPercent = withPercent ? "inputs__number-input_withPercent" : "";
+    const containerWithPercent = withPercent ? "inputs__container_withPercent" : "";
+
   .inputs
-    label(for=id)= labelText
-    .inputs__container
-      .inputs__input-number
-        input.inputs__input&attributes(inputNumberAttributes)
-        if withPercent
+    label.inputs__label(for=id)= labelText
+    .inputs__container(class = `${containerWithPercent}`)
+      .inputs__up-block
+        .inputs__number-input(class = `${numberInputWithPercent}`)
+          input.inputs__input&attributes(inputNumberAttributes)
           span.inputs__span= spanText
-        else
+        if withPercent
           .inputs__percent= `${percentValue}%`
       label.inputs__range-label
-        input(
+        input.inputs__range-input(
           type="range"
           id=rangeId
           minRange=min

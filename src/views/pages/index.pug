@@ -24,4 +24,26 @@ block content
         max: "10000000",
         spanText: "₽",
       })
+      +inputs({
+        labelText: "Первоначальный взнос",
+        id: "down-payment",
+        type: "number",
+        name: "down-payment",
+        value: "420000",
+        min: "1500000",
+        max: "10000000",
+        spanText: "₽",
+        withPercent: true,
+        percentValue: "13",
+      })
+      +inputs({
+        labelText: "Срок лизинга",
+        id: "leasing-term",
+        type: "number",
+        name: "leasing-term",
+        value: "60",
+        min: "6",
+        max: "120",
+        spanText: "мес.",
+      })
 

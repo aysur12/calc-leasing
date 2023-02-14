@@ -1,0 +1,109 @@
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 427px;
+
+  &__label {
+    color: $dark-grey;
+    @include font-small-size;
+  }
+
+  &__container {
+    position: relative;
+    padding: 16px 24px;
+    background-color: $light-grey;
+    border-radius: 16px;
+
+    &_withPercent {
+      padding: 7px 7px 7px 24px;
+    }
+  }
+
+  &__up-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__number-input {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &_withPercent {
+      max-width: 141px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+
+    color: $dark-grey;
+    background-color: $light-grey;
+
+    border: none;
+    outline: none;
+    @include font-big-size;
+  }
+
+  &__span {
+    color: $dark-grey;
+    @include font-big-size;
+  }
+
+  &__percent {
+    padding: 15px 17px;
+    color: $dark-grey;
+    background-color: $middle-grey;
+    border-radius: 16px;
+    @include font-middle-size;
+  }
+
+  &__range-label {
+    position: absolute;
+    top: 54px;
+    left: 24px;
+    width: 100%;
+    max-width: 376px;
+  }
+
+  &__range-input {
+    width: 100%;
+    appearance: none;
+
+    &::-webkit-slider-runnable-track {
+      height: 0;
+      border: 1px solid $orange;
+      background-color: $white;
+    }
+
+    &::-moz-range-track {
+      height: 0;
+      border: 1px solid $orange;
+      background-color: $white;
+    }
+
+    &::-webkit-slider-thumb {
+      width: 20px;
+      height: 20px;
+      background: $orange;
+      border-radius: 50%;
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -10px;
+    }
+
+    &::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      margin-top: -10px;
+      background: $orange;
+      border-radius: 50%;
+      cursor: pointer;
+      -webkit-appearance: none;
+    }
+  }
+}
