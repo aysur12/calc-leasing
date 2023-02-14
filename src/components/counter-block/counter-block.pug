@@ -1,0 +1,10 @@
+mixin counter-block(params = {})
+  -
+    const {
+      titleText="",
+      value="",
+    } = params;
+
+  .counter-block
+    h2.counter-block__title= titleText
+    span.counter-block__value= `${value} ₽`

@@ -7,8 +7,17 @@
     margin-top: 216px;
   }
 
+  &__content {
+    
+  }
+
   &__inputs {
     display: flex;
     gap: 32px;
+  }
+
+  &__counter-blocks {
+    display: flex;
+    
   }
 }
