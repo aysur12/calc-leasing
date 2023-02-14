@@ -14,7 +14,7 @@ block content
         titleText: "Рассчитайте стоимость автомобиля в лизинг"
       })
     .page__content  
-      .page__inputs
+      .inputs.inputs_vehicle-price
         +inputs({
           labelText: "Стоимость автомобиля",
           id: "vehicle-price",
@@ -26,6 +26,7 @@ block content
           max: "10000000",
           spanText: "₽",
         })
+      .inputs.inputs_down-payment
         +inputs({
           labelText: "Первоначальный взнос",
           id: "down-payment",
@@ -38,6 +39,7 @@ block content
           withPercent: true,
           percentValue: "13",
         })
+      .inputs.inputs_leasing-term
         +inputs({
           labelText: "Срок лизинга",
           id: "leasing-term",
@@ -48,15 +50,17 @@ block content
           max: "120",
           spanText: "мес.",
         })
-      .page__down-block
-        .page__counter-blocks
-          +counter-block({
-            titleText: "Сумма договора лизинга",
-            value: "4 467 313",
-          })
-          +counter-block({
-            titleText: "Ежемесячный платеж от",
-            value: "114 455",
-          })
+      .page__counter-block.page__counter-block_contract-amount
+        +counter-block({
+          titleText: "Сумма договора лизинга",
+          value: "4 467 313",
+        })
+      .page__counter-block.page__counter-block_monthly-payment
+        +counter-block({
+          titleText: "Ежемесячный платеж от",
+          value: "114 455",
+        })
+      .page__button
+        button Отправить
 
 
