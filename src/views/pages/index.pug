@@ -3,6 +3,7 @@ extends ../layouts/default
 include ../../components/title/title
 include ../../components/inputs/inputs
 include ../../components/counter-block/counter-block
+include ../../components/button/button
 
 block variables
   - const title= "Leasing calculator";
@@ -61,6 +62,8 @@ block content
           value: "114 455",
         })
       .page__button
-        button Отправить
+        +button({
+          btnText: "Оставить заявку"
+        })
 
 

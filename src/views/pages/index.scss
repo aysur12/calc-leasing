@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 1440px;
   padding: 0 47px;
+  margin: 0 auto;
 
   &__title {
     margin-top: 216px;
@@ -42,5 +43,6 @@
 
   &__button {
     grid-area: button;
+    margin-top: 9px;
   }
 }
