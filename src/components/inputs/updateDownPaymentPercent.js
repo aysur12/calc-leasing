@@ -1,10 +1,7 @@
 const updateDownPaymentPercentage = (
   priceInput,
   downPaymentInput,
-  downPaymentSlider,
   percentageDiv,
-  minPercent,
-  maxPercent
 ) => {
   const price = parseFloat(priceInput.value, 10);
   const downPayment = parseInt(downPaymentInput.value, 10);
