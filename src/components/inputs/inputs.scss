@@ -43,10 +43,16 @@
     padding: 0;
     color: $dark-grey;
     background-color: $light-grey;
-
     border: none;
     outline: none;
+    appearance: none;
     @include font-big-size;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   }
 
   &__span {

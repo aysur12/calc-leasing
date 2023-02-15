@@ -9,8 +9,25 @@
     @include font-small-size;
   }
 
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
   &__value {
     color: $light-black;
     @include font-biggest-size;
+  }
+
+
+  &__svg {
+    display: block;
+    width: 39px;
+    height: 39px;
+  }
+
+  &__svg-path {
+    fill: $light-black;
   }
 }

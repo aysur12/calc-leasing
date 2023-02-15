@@ -7,9 +7,11 @@ mixin inputs(params = {})
       name= "",
       autofocus= false,
       required= true,
+      pattern="[0-9 ]*",
       value,
       min,
       max,
+      rangeId="",
       withPercent= false,
       spanText= "",
       percentValue="",
@@ -23,8 +25,7 @@ mixin inputs(params = {})
       autofocus,
       required,
       value,
-      min,
-      max,
+      pattern,
     }
 
     const numberInputWithPercent = withPercent ? "inputs__number-input_withPercent" : "";
@@ -43,7 +44,7 @@ mixin inputs(params = {})
         input.inputs__range-input(
           type="range"
           id=rangeId
-          minRange=min
-          maxRange=max
+          min=min
+          max=max
           valueRange=value
         )

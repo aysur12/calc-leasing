@@ -1,1 +1,1 @@
-
+import './inputs/inputs';

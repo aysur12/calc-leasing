@@ -19,23 +19,25 @@ block content
         +inputs({
           labelText: "Стоимость автомобиля",
           id: "vehicle-price",
-          type: "number",
+          type: "text",
           name: "vehicle-price",
           autofocus: true,
           value: "3300000",
           min: "1500000",
           max: "10000000",
+          rangeId: "vehicle-price-range",
           spanText: "₽",
         })
       .page__inputs.page__inputs_down-payment
         +inputs({
           labelText: "Первоначальный взнос",
           id: "down-payment",
-          type: "number",
+          type: "text",
           name: "down-payment",
           value: "420000",
           min: "1500000",
           max: "10000000",
+          rangeId: "down-payment-range",
           spanText: "₽",
           withPercent: true,
           percentValue: "13",
@@ -44,11 +46,12 @@ block content
         +inputs({
           labelText: "Срок лизинга",
           id: "leasing-term",
-          type: "number",
+          type: "text",
           name: "leasing-term",
           value: "60",
           min: "6",
           max: "120",
+          rangeId: "leasing-term-range",
           spanText: "мес.",
         })
       .page__counter-block.page__counter-block_contract-amount
