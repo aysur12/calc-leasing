@@ -6,6 +6,20 @@
   background-color: $orange;
   border: none;
   border-radius: 40px;
-  text-align: cente;
+  text-align: center;
+  transition-duration: 0.2s;
   @include font-big-size;
+
+  &:hover,
+  &:focus {
+    background-color: $black;
+  }
+
+  &:active {
+    background-color: $dark-grey;
+  }
+
+  &:disabled {
+    background-color: $light-orange;
+  }
 }
