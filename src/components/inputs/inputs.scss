@@ -34,7 +34,8 @@
     width: 100%;
 
     &_withPercent {
-      max-width: 141px;
+      display: flex;
+      justify-content: flex-start;
     }
   }
 
@@ -47,17 +48,23 @@
     outline: none;
     appearance: none;
     @include font-big-size;
-
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
   }
 
   &__span {
     color: $dark-grey;
     @include font-big-size;
+
+    &_withPercent {
+      position: relative;
+
+      &::after {
+        content: '₽';
+        position: absolute;
+        bottom: -16px;
+        right: -11px;
+        color: $dark-grey;
+      }
+    }
   }
 
   &__percent {
