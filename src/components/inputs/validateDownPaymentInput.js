@@ -7,7 +7,6 @@ const validateDownPaymentInput = (downPaymentInput, priceInput, slider) => {
   const minValue = Math.round(priceValue * 0.1);
   const maxValue = Math.round(priceValue * 0.6);
 
-  console.log(minValue, maxValue);
   if (intValue < minValue) {
     downPaymentInput.value = minValue
       .toString()

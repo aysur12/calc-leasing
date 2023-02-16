@@ -56,11 +56,13 @@ block content
         +counter-block({
           titleText: "Сумма договора лизинга",
           value: "4 467 313",
+          forContractAmount: true,
         })
       .page__counter-block.page__counter-block_monthly-payment
         +counter-block({
           titleText: "Ежемесячный платеж от",
           value: "114 455",
+          forMonthlyPayment: true,
         })
       .page__button
         +button({

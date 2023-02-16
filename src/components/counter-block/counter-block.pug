@@ -3,12 +3,17 @@ mixin counter-block(params = {})
     const {
       titleText="",
       value="",
+      forMonthlyPayment=false,
+      forContractAmount=false,
     } = params;
+
+    const valueMonthlyPayment = forMonthlyPayment ? "js-counter-block__value_for_monthly-payment" : "";
+    const contractAmount = forContractAmount ? "js-counter-block__value_for_contract-amount" : "";
 
   .counter-block
     h2.counter-block__title= titleText
     .counter-block__content
-      span.counter-block__value= value
+      span.counter-block__value.js-counter-block__value(class= `${valueMonthlyPayment}${contractAmount}`)= value
       svg(class="counter-block__svg" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg")
         path(class="counter-block__svg-path" d="M11.6774 12.84C20.1074 12.84 20.1074 0.899999 11.6774 0.899999H2.79742V8.64H0.487422V12.84H2.79742V14.13H0.487422V18.33H2.79742V21H7.74742V18.33H14.9174V14.13H7.74742V12.84H11.6774ZM11.2274 5.7C13.3574 5.7 13.3274 8.64 11.2274 8.64H7.74742V5.7H11.2274Z")
 
