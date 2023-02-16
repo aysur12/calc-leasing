@@ -4,8 +4,16 @@
   padding: 0 47px;
   margin: 0 auto;
 
+  @media screen and (max-width: 768px) {
+    padding: 0 36px;
+  }
+
   &__title {
     margin-top: 216px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 66px;
+    }
   }
 
   &__form {
@@ -15,9 +23,21 @@
       'contract-amount monthly-payment button' 1fr
       / 31.75% 31.75% 31.75%;
     gap: 53px 31px;
+    width: 100%;
 
-    @media screen and (max-width: 1121px) {
+    @media screen and (max-width: 1120px) {
       grid-template-columns: repeat(3, 31.3%);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-areas:
+        'vehicle-price vehicle-price'
+        'down-payment down-payment'
+        'leasing-term leasing-term'
+        'contract-amount monthly-payment'
+        'button 1fr';
+      grid-template-columns: 50% 47.6%;
+      gap: 38px 16px;
     }
   }
 
@@ -38,15 +58,27 @@
   &__counter-block {
     &_contract-amount {
       grid-area: contract-amount;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 7px;
+      }
     }
 
     &_monthly-payment {
       grid-area: monthly-payment;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 7px;
+      }
     }
   }
 
   &__button {
     grid-area: button;
     margin-top: 9px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 4px;
+    }
   }
 }

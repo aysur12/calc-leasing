@@ -4,7 +4,6 @@
   flex-direction: column;
   gap: 24px;
   width: 100%;
-  max-width: 427px;
 
   &__label {
     color: $dark-grey;
@@ -16,8 +15,12 @@
     background-color: $light-grey;
     border-radius: 16px;
 
-    @media screen and (max-width: 1121px) {
+    @media screen and (max-width: 1120px) {
       padding: 17px 24px 16px 31px;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 17px 24px 16px 24px;
     }
 
     &_withPercent {
