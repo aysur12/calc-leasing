@@ -32,20 +32,21 @@ mixin inputs(params = {})
     }
 
     const labelCreditAmount = forCreditAmount ? "js-inputs__label_for_credit-amount" : "";
-    const containerWithPercent = withPercent ? "inputs__container_withPercent" : "";
+    const textFieldWithPercent = withPercent ? "inputs__text-field_withPercent" : "";
     const numberInputWithPercent = withPercent ? "inputs__number-input_withPercent" : "";
     const inputWithPercent = withPercent ? "inputs__input_withPercent" : "";
     const spanWithPercent = withPercent ? "inputs__span_withPercent" : "";
 
   .inputs
     label.inputs__label(class= `${labelCreditAmount}` for=id)= labelText
-    .inputs__container(class = `${containerWithPercent}`)
-      .inputs__up-block
-        .inputs__number-input(class= `${numberInputWithPercent}`)
-          input.inputs__input(class= `${inputWithPercent}`)&attributes(inputNumberAttributes)
-          span.inputs__span(class= `${spanWithPercent}`)= spanText
-        if withPercent
-          .inputs__percent= `${percentValue}%`
+    .inputs__container
+      .inputs__text-field(class = `${textFieldWithPercent}`)
+        .inputs__up-block
+          .inputs__number-input(class= `${numberInputWithPercent}`)
+            input.inputs__input(class= `${inputWithPercent}`)&attributes(inputNumberAttributes)
+            span.inputs__span(class= `${spanWithPercent}`)= spanText
+          if withPercent
+            .inputs__percent= `${percentValue}%`
       .inputs__down-block
         label.inputs__range-label
           input.inputs__range-input(

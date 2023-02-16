@@ -23,7 +23,7 @@
     background-color: $light-orange;
   }
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 767px) {
     padding: 18px 0 22px;
     @include font-big-size-mobile;
   }

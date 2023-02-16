@@ -18,17 +18,23 @@
     }
   }
 
-  &__container {
-    padding: 17px 24px 16px;
+  &__text-field  {
+    padding: 15px 22px 14px;
     background-color: $light-grey;
+    border: 2px solid transparent;
     border-radius: 16px;
 
+    &:focus-within {
+      background-color: $white;
+      border: 2px solid $light-grey;
+    }
+
     @media screen and (max-width: 1120px) {
-      padding: 17px 24px 16px 31px;
+      padding: 15px 22px 14px 29px;
     }
 
     @media screen and (max-width: 768px) {
-      padding: 17px 24px 16px 24px;
+      padding: 15px 22px 14px 22px;
     }
 
     @media screen and (max-width: 425px) {
@@ -36,7 +42,7 @@
     }
 
     &_withPercent {
-      padding: 8px 7px 7px 24px;
+      padding: 6px 5px 5px 22px;
 
       @media screen and (max-width: 425px) {
         padding: 6px 7px 7px 20px;
@@ -62,6 +68,7 @@
     }
   }
 
+
   &__input {
     width: 100%;
     padding: 0;
@@ -71,6 +78,14 @@
     outline: none;
     appearance: none;
     @include font-big-size;
+
+    &:focus {
+      background-color: $white;
+    }
+
+    &:disabled .inputs__container {
+      opacity: 0.4;
+    }
 
     @media screen and (max-width: 425px) {
       @include font-big-size-mobile;
@@ -135,6 +150,7 @@
   &__range-input {
     width: 100%;
     appearance: none;
+    outline: none;
 
     &::-webkit-slider-runnable-track {
       height: 0;
