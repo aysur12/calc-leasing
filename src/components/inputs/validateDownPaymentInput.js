@@ -11,14 +11,16 @@ const validateDownPaymentInput = (downPaymentInput, priceInput, slider) => {
     downPaymentInput.value = minValue
       .toString()
       .replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    slider.value = minValue;
   } else if (intValue > maxValue) {
     downPaymentInput.value = maxValue
       .toString()
       .replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    slider.value = maxValue;
   } else {
     downPaymentInput.value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    slider.value = value;
   }
-  slider.value = intValue;
 };
 
 export default validateDownPaymentInput;

@@ -8,7 +8,7 @@ const validateNumber = (input, slider, minValue, maxValue) => {
   } else {
     input.value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
   }
-  slider.value = intValue;
+  slider.value = value;
 };
 
 export default validateNumber;

@@ -2,9 +2,9 @@ import calculateMonthlyPayment from '../counter-block/calculateMonthlyPayment';
 import calculateContractAmount from '../counter-block/calculateContractAmount';
 import validateNumber from './validateNumber';
 import updateNumber from './updateNumber';
-import updateDownPaymentPercentage from './updateDownPaymentPercent';
+import updateDownPaymentPercentage from './updateDownPaymentPercentage';
 import validateDownPaymentInput from './validateDownPaymentInput';
-import updateDownPaymentSlider from './updateDownPaymentSlider';
+import setRangeDownPaymentSlider from './setRangeDownPaymentSlider';
 import addAutoWidthInput from './addAutoWidthInput';
 
 const vehiclePriceInput = document.getElementById('vehicle-price');
@@ -19,8 +19,13 @@ const leasingTermSlider = document.getElementById('leasing-term-range');
 const percentDiv = document.querySelector('.inputs__percent');
 
 validateNumber(vehiclePriceInput, vehiclePriceSlider);
-validateNumber(downPaymentInput, downPaymentSlider);
+validateDownPaymentInput(
+  downPaymentInput,
+  vehiclePriceInput,
+  downPaymentSlider
+);
 addAutoWidthInput(downPaymentInput);
+setRangeDownPaymentSlider(downPaymentSlider, vehiclePriceInput);
 
 vehiclePriceInput.addEventListener('change', () => {
   validateNumber(vehiclePriceInput, vehiclePriceSlider, 1500000, 10000000);
@@ -68,11 +73,8 @@ downPaymentInput.addEventListener('input', () => {
 });
 
 downPaymentSlider.addEventListener('input', () => {
-  updateDownPaymentSlider(
-    downPaymentSlider,
-    downPaymentInput,
-    vehiclePriceInput
-  );
+  setRangeDownPaymentSlider(downPaymentSlider, vehiclePriceInput);
+  updateNumber(downPaymentSlider, downPaymentInput);
   addAutoWidthInput(downPaymentInput);
   updateDownPaymentPercentage(vehiclePriceInput, downPaymentInput, percentDiv);
   calculateMonthlyPayment(
