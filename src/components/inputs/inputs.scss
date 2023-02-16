@@ -1,4 +1,5 @@
 .inputs {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -11,13 +12,16 @@
   }
 
   &__container {
-    position: relative;
-    padding: 16px 24px;
+    padding: 17px 24px 16px;
     background-color: $light-grey;
     border-radius: 16px;
 
+    @media screen and (max-width: 1121px) {
+      padding: 17px 24px 16px 31px;
+    }
+
     &_withPercent {
-      padding: 7px 7px 7px 24px;
+      padding: 8px 7px 7px 24px;
     }
   }
 
@@ -75,11 +79,17 @@
     @include font-middle-size;
   }
 
-  &__range-label {
+  &__down-block {
     position: absolute;
-    top: 54px;
-    left: 24px;
-    width: 88%;
+    display: flex;
+    justify-content: center;
+    top: 98px;
+    left: 0px;
+    width: 100%;
+  }
+
+  &__range-label {
+    width: 85%;
   }
 
   &__range-input {

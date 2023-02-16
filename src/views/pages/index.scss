@@ -15,6 +15,10 @@
       'contract-amount monthly-payment button' 1fr
       / 31.75% 31.75% 31.75%;
     gap: 53px 31px;
+
+    @media screen and (max-width: 1121px) {
+      grid-template-columns: repeat(3, 31.3%);
+    }
   }
 
   &__inputs {

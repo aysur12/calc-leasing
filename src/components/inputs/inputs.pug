@@ -32,22 +32,24 @@ mixin inputs(params = {})
 
     const containerWithPercent = withPercent ? "inputs__container_withPercent" : "";
     const numberInputWithPercent = withPercent ? "inputs__number-input_withPercent" : "";
+    const inputWithPercent = withPercent ? "inputs__input_withPercent" : "";
     const spanWithPercent = withPercent ? "inputs__span_withPercent" : "";
 
   .inputs
     label.inputs__label(for=id)= labelText
     .inputs__container(class = `${containerWithPercent}`)
       .inputs__up-block
-        .inputs__number-input(class = `${numberInputWithPercent}`)
-          input.inputs__input&attributes(inputNumberAttributes)
+        .inputs__number-input(class= `${numberInputWithPercent}`)
+          input.inputs__input(class= `${inputWithPercent}`)&attributes(inputNumberAttributes)
           span.inputs__span(class= `${spanWithPercent}`)= spanText
         if withPercent
           .inputs__percent= `${percentValue}%`
-      label.inputs__range-label
-        input.inputs__range-input(
-          type="range"
-          id=rangeId
-          min=min
-          max=max
-          value=value
-        )
+      .inputs__down-block
+        label.inputs__range-label
+          input.inputs__range-input(
+            type="range"
+            id=rangeId
+            min=min
+            max=max
+            value=value
+          )
