@@ -3,28 +3,49 @@
   flex-direction: column;
   gap: 13px;
 
+  @media screen and (max-width: 425px) {
+    gap: 4px;
+  }
+
   &__title {
     margin: 0;
     color: $dark-grey;
     @include font-small-size;
+
+    @media screen and (max-width: 425px) {
+      @include font-small-size-mobile;
+    }
   }
 
   &__content {
     display: flex;
     align-items: center;
     gap: 15px;
+
+    @media screen and (max-width: 425px) {
+      gap: 7px;
+    }
+  
   }
 
   &__value {
     color: $light-black;
     @include font-biggest-size;
-  }
 
+    @media screen and (max-width: 425px) {
+      @include font-big-size-mobile;
+    }
+  }
 
   &__svg {
     display: block;
     width: 39px;
     height: 39px;
+
+    @media screen and (max-width: 425px) {
+      width: 15px;
+      height: 19px;
+    }
   }
 
   &__svg-path {

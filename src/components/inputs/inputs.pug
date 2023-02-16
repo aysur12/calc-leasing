@@ -16,6 +16,7 @@ mixin inputs(params = {})
       withPercent= false,
       percentValue="",
       spanText= "",
+      forCreditAmount=false,
     } = params;
 
     const inputNumberAttributes = {
@@ -30,13 +31,14 @@ mixin inputs(params = {})
       autocomplete,
     }
 
+    const labelCreditAmount = forCreditAmount ? "js-inputs__label_for_credit-amount" : "";
     const containerWithPercent = withPercent ? "inputs__container_withPercent" : "";
     const numberInputWithPercent = withPercent ? "inputs__number-input_withPercent" : "";
     const inputWithPercent = withPercent ? "inputs__input_withPercent" : "";
     const spanWithPercent = withPercent ? "inputs__span_withPercent" : "";
 
   .inputs
-    label.inputs__label(for=id)= labelText
+    label.inputs__label(class= `${labelCreditAmount}` for=id)= labelText
     .inputs__container(class = `${containerWithPercent}`)
       .inputs__up-block
         .inputs__number-input(class= `${numberInputWithPercent}`)

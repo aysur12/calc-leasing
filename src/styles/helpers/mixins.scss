@@ -3,7 +3,7 @@
 }
 
 @mixin font-biggest-size-mobile {
-  font: 900 2.125rm/0.9 $main-font-family;
+  font: 900 2.125rem/0.9 $main-font-family;
 }
 
 @mixin font-big-size {
@@ -23,6 +23,6 @@
 }
 
 @mixin font-small-size-mobile {
-  font: 400 0.875rem/1.36 $main-font-family;
+  font: 400 0.875rem/1.36 $secondary-font-family;
 }
 

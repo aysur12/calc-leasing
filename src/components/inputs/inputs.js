@@ -17,6 +17,17 @@ const leasingTermInput = document.getElementById('leasing-term');
 const leasingTermSlider = document.getElementById('leasing-term-range');
 
 const percentDiv = document.querySelector('.inputs__percent');
+const labelCreditAmount = document.querySelector(
+  '.js-inputs__label_for_credit-amount'
+);
+
+window.addEventListener('resize', function () {
+  if (window.innerWidth <= 425) {
+    labelCreditAmount.textContent = 'Желаемая сумма кредита';
+  } else {
+    labelCreditAmount.textContent = 'Стоимость автомобиля';
+  }
+});
 
 validateNumber(vehiclePriceInput, vehiclePriceSlider);
 validateDownPaymentInput(

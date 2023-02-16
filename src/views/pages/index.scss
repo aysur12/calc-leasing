@@ -8,11 +8,19 @@
     padding: 0 36px;
   }
 
+  @media screen and (max-width: 425px) {
+    padding: 0 20px;
+  }
+
   &__title {
     margin-top: 216px;
 
     @media screen and (max-width: 768px) {
       margin-top: 66px;
+    }
+
+    @media screen and (max-width: 425px) {
+      margin-top: 46px;
     }
   }
 
@@ -39,6 +47,18 @@
       grid-template-columns: 50% 47.6%;
       gap: 38px 16px;
     }
+
+    @media screen and (max-width: 425px) {
+      grid-template-areas:
+        'vehicle-price'
+        'down-payment'
+        'leasing-term'
+        'contract-amount'
+        'monthly-payment'
+        'button';
+      grid-template-columns: 1fr;
+      gap: 23px;
+    }
   }
 
   &__inputs {
@@ -62,6 +82,10 @@
       @media screen and (max-width: 768px) {
         margin-top: 7px;
       }
+
+      @media screen and (max-width: 425px) {
+        margin-top: 2px;
+      }
     }
 
     &_monthly-payment {
@@ -69,6 +93,10 @@
 
       @media screen and (max-width: 768px) {
         margin-top: 7px;
+      }
+
+      @media screen and (max-width: 425px) {
+        margin-top: 4px;
       }
     }
   }
@@ -79,6 +107,10 @@
 
     @media screen and (max-width: 768px) {
       margin-top: 4px;
+    }
+
+    @media screen and (max-width: 425px) {
+      margin: 8px 0 64px;
     }
   }
 }
