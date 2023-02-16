@@ -3,8 +3,8 @@
   flex-direction: column;
   gap: 13px;
 
-  @media screen and (max-width: 425px) {
-    gap: 4px;
+  @media screen and (max-width: 767px) {
+    gap: 2px;
   }
 
   &__title {
@@ -12,7 +12,7 @@
     color: $dark-grey;
     @include font-small-size;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 767px) {
       @include font-small-size-mobile;
     }
   }
@@ -22,7 +22,7 @@
     align-items: center;
     gap: 15px;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 767px) {
       gap: 7px;
     }
   
@@ -32,7 +32,7 @@
     color: $light-black;
     @include font-biggest-size;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 767px) {
       @include font-big-size-mobile;
     }
   }
@@ -42,7 +42,7 @@
     width: 39px;
     height: 39px;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 767px) {
       width: 15px;
       height: 19px;
     }

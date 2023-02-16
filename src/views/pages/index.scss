@@ -4,22 +4,22 @@
   padding: 0 47px;
   margin: 0 auto;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1119px) {
     padding: 0 36px;
   }
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 767px) {
     padding: 0 20px;
   }
 
   &__title {
     margin-top: 216px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1119px) {
       margin-top: 66px;
     }
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 767px) {
       margin-top: 46px;
     }
   }
@@ -33,11 +33,11 @@
     gap: 51px 31px;
     width: 100%;
 
-    @media screen and (max-width: 1120px) {
+    @media screen and (max-width: 1439px) {
       grid-template-columns: repeat(3, 31.3%);
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1119px) {
       grid-template-areas:
         'vehicle-price vehicle-price'
         'down-payment down-payment'
@@ -48,7 +48,7 @@
       gap: 38px 16px;
     }
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 767px) {
       grid-template-areas:
         'vehicle-price'
         'down-payment'
@@ -57,7 +57,7 @@
         'monthly-payment'
         'button';
       grid-template-columns: 1fr;
-      gap: 23px;
+      gap: 24px;
     }
   }
 
@@ -79,23 +79,23 @@
     &_contract-amount {
       grid-area: contract-amount;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1119px) {
         margin-top: 7px;
       }
 
-      @media screen and (max-width: 425px) {
-        margin-top: 2px;
+      @media screen and (max-width: 767px) {
+        margin-top: 0px;
       }
     }
 
     &_monthly-payment {
       grid-area: monthly-payment;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1119px) {
         margin-top: 7px;
       }
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 767px) {
         margin-top: 4px;
       }
     }
@@ -104,13 +104,14 @@
   &__button {
     grid-area: button;
     margin-top: 9px;
+    
 
-    @media screen and (max-width: 768px) {
-      margin-top: 4px;
+    @media screen and (max-width: 1119px) {
+      margin: 4px 0 156px;
     }
 
-    @media screen and (max-width: 425px) {
-      margin: 8px 0 64px;
+    @media screen and (max-width: 767px) {
+      margin: 9px 0 64px;
     }
   }
 }
