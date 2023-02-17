@@ -29,6 +29,7 @@ window.addEventListener('resize', () => {
   }
 });
 
+validateNumber(vehiclePriceInput, vehiclePriceSlider, 1500000, 10000000);
 validateDownPaymentInput(
   downPaymentInput,
   vehiclePriceInput,
