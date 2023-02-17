@@ -1,6 +1,6 @@
 const calculateMonthlyPayment = (priceInput, downPaymentInput, leasingTermInput) => {
   const monthlyPaymentDiv = document.querySelector(
-    '.js-counter-block__value_for_monthly-payment'
+    '.js-counter-block__value_for_monthly-payment',
   );
 
   const priceValue = priceInput.value.replace(/\s/g, '');
@@ -12,9 +12,8 @@ const calculateMonthlyPayment = (priceInput, downPaymentInput, leasingTermInput)
   const termValue = leasingTermInput.value.replace(/\s/g, '');
   const term = parseInt(termValue, 10);
 
-  const monthlyPaymentValue =
-    ((price - downPayment) * (0.05 * Math.pow(1 + 0.05, term))) /
-    (Math.pow(1 + 0.05, term) - 1);
+  const monthlyPaymentValue = ((price - downPayment) * (0.05 * (1 + 0.05) ** term))
+    / ((1 + 0.05) ** term - 1);
 
   const roundedMonthPayment = Math.ceil(monthlyPaymentValue.toFixed(2));
 

@@ -1,5 +1,5 @@
 const updateNumber = (slider, input) => {
-  const value = slider.value;
+  const { value } = slider;
   input.value = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 };
 

@@ -1,9 +1,9 @@
 const calculateContractAmount = (downPaymentInput, leasingTermInput) => {
   const contractAmountDiv = document.querySelector(
-    '.js-counter-block__value_for_contract-amount'
+    '.js-counter-block__value_for_contract-amount',
   );
   const monthlyPaymentDiv = document.querySelector(
-    '.js-counter-block__value_for_monthly-payment'
+    '.js-counter-block__value_for_monthly-payment',
   );
   const monthlyPaymentValue = parseInt(monthlyPaymentDiv.textContent, 10);
 

@@ -1,6 +1,6 @@
 const setRangeDownPaymentSlider = (slider, priceInput) => {
-  priceAmount = priceInput.value.replace(/\s/g, '');
-  priceValue = parseInt(priceAmount, 10);
+  const priceAmount = priceInput.value.replace(/\s/g, '');
+  const priceValue = parseInt(priceAmount, 10);
   const minValue = Math.round(priceValue * 0.1);
   const maxValue = Math.round(priceValue * 0.6);
 

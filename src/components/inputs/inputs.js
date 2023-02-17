@@ -18,10 +18,10 @@ const leasingTermSlider = document.getElementById('leasing-term-range');
 
 const percentDiv = document.querySelector('.inputs__percent');
 const labelCreditAmount = document.querySelector(
-  '.js-inputs__label_for_credit-amount'
+  '.js-inputs__label_for_credit-amount',
 );
 
-window.addEventListener('resize',() => {
+window.addEventListener('resize', () => {
   if (window.innerWidth <= 767) {
     labelCreditAmount.textContent = 'Желаемая сумма кредита';
   } else {
@@ -32,7 +32,7 @@ window.addEventListener('resize',() => {
 validateDownPaymentInput(
   downPaymentInput,
   vehiclePriceInput,
-  downPaymentSlider
+  downPaymentSlider,
 );
 addAutoWidthInput(downPaymentInput);
 setRangeDownPaymentSlider(downPaymentSlider, vehiclePriceInput);
@@ -42,18 +42,17 @@ vehiclePriceInput.addEventListener('change', () => {
   calculateMonthlyPayment(
     vehiclePriceInput,
     downPaymentInput,
-    leasingTermInput
+    leasingTermInput,
   );
   calculateContractAmount(downPaymentInput, leasingTermInput);
 });
-
 
 vehiclePriceSlider.addEventListener('input', () => {
   updateNumber(vehiclePriceSlider, vehiclePriceInput);
   calculateMonthlyPayment(
     vehiclePriceInput,
     downPaymentInput,
-    leasingTermInput
+    leasingTermInput,
   );
   calculateContractAmount(downPaymentInput, leasingTermInput);
 });
@@ -62,14 +61,14 @@ downPaymentInput.addEventListener('change', () => {
   validateDownPaymentInput(
     downPaymentInput,
     vehiclePriceInput,
-    downPaymentSlider
+    downPaymentSlider,
   );
   addAutoWidthInput(downPaymentInput);
   updateDownPaymentPercentage(vehiclePriceInput, downPaymentInput, percentDiv);
   calculateMonthlyPayment(
     vehiclePriceInput,
     downPaymentInput,
-    leasingTermInput
+    leasingTermInput,
   );
   calculateContractAmount(downPaymentInput, leasingTermInput);
 });
@@ -87,7 +86,7 @@ downPaymentSlider.addEventListener('input', () => {
   calculateMonthlyPayment(
     vehiclePriceInput,
     downPaymentInput,
-    leasingTermInput
+    leasingTermInput,
   );
   calculateContractAmount(downPaymentInput, leasingTermInput);
 });
@@ -97,7 +96,7 @@ leasingTermInput.addEventListener('change', () => {
   calculateMonthlyPayment(
     vehiclePriceInput,
     downPaymentInput,
-    leasingTermInput
+    leasingTermInput,
   );
   calculateContractAmount(downPaymentInput, leasingTermInput);
 });
@@ -107,7 +106,7 @@ leasingTermSlider.addEventListener('input', () => {
   calculateMonthlyPayment(
     vehiclePriceInput,
     downPaymentInput,
-    leasingTermInput
+    leasingTermInput,
   );
   calculateContractAmount(downPaymentInput, leasingTermInput);
 });

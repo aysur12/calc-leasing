@@ -1,7 +1,7 @@
 const updateDownPaymentPercentage = (
   priceInput,
   downPaymentInput,
-  percentageDiv
+  percentageDiv,
 ) => {
   const priceValue = priceInput.value.replace(/\s/g, '');
   const price = parseInt(priceValue, 10);
@@ -10,12 +10,12 @@ const updateDownPaymentPercentage = (
   const downPaymentPercentage = (downPayment / price) * 100;
   const roundedDownPaymentPercentage = Math.ceil(downPaymentPercentage.toFixed(2));
 
-  if (roundedDownPaymentPercentage >= 10 && roundedDownPaymentPercentage<= 60) {
+  if (roundedDownPaymentPercentage >= 10 && roundedDownPaymentPercentage <= 60) {
     percentageDiv.textContent = `${roundedDownPaymentPercentage}%`;
   } else if (roundedDownPaymentPercentage < 10) {
-    percentageDiv.textContent = `10%`;
+    percentageDiv.textContent = '10%';
   } else if (roundedDownPaymentPercentage > 60) {
-    percentageDiv.textContent = `60%`;
+    percentageDiv.textContent = '60%';
   }
 };
 
