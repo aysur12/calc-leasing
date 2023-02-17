@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leasing calculator</title>
+    <link href="./assets/styles/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <div class="page">
+        <div class="page__title">
+          <h1 class="title">Рассчитайте стоимость автомобиля в лизинг</h1>
+        </div>
+        <form class="page__form">
+          <div class="page__inputs page__inputs_vehicle-price">
+            <div class="inputs">
+              <label class="inputs__label js-inputs__label_for_credit-amount" for="vehicle-price">Стоимость автомобиля</label>
+              <div class="inputs__container">
+                <div class="inputs__text-field">
+                  <div class="inputs__up-block">
+                    <div class="inputs__number-input">
+                      <input class="inputs__input" type="text" id="vehicle-price" name="vehicle-price" required="required" value="3300000" pattern="^[ 0-9]+$" autocomplete="off"/><span class="inputs__span">₽</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="inputs__down-block">
+                  <label class="inputs__range-label">
+                    <input class="inputs__range-input" type="range" id="vehicle-price-range" min="1500000" max="10000000" value="3300000"/>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page__inputs page__inputs_down-payment">
+            <div class="inputs">
+              <label class="inputs__label" for="down-payment">Первоначальный взнос</label>
+              <div class="inputs__container">
+                <div class="inputs__text-field inputs__text-field_withPercent">
+                  <div class="inputs__up-block">
+                    <div class="inputs__number-input inputs__number-input_withPercent">
+                      <input class="inputs__input inputs__input_withPercent" type="text" id="down-payment" name="down-payment" required="required" value="420000" pattern="^[ 0-9]+$" autocomplete="off"/><span class="inputs__span inputs__span_withPercent"></span>
+                    </div>
+                    <div class="inputs__percent">13%</div>
+                  </div>
+                </div>
+                <div class="inputs__down-block">
+                  <label class="inputs__range-label">
+                    <input class="inputs__range-input" type="range" id="down-payment-range" min="330000" max="1980000" value="420000"/>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page__inputs page__inputs_leasing-term">
+            <div class="inputs">
+              <label class="inputs__label" for="leasing-term">Срок лизинга</label>
+              <div class="inputs__container">
+                <div class="inputs__text-field">
+                  <div class="inputs__up-block">
+                    <div class="inputs__number-input">
+                      <input class="inputs__input" type="text" id="leasing-term" name="leasing-term" required="required" value="60" pattern="^[ 0-9]+$" autocomplete="off"/><span class="inputs__span">мес.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="inputs__down-block">
+                  <label class="inputs__range-label">
+                    <input class="inputs__range-input" type="range" id="leasing-term-range" min="6" max="120" value="60"/>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page__counter-block page__counter-block_contract-amount">
+            <div class="counter-block">
+              <h2 class="counter-block__title">Сумма договора лизинга</h2>
+              <div class="counter-block__content"><span class="counter-block__value js-counter-block__value js-counter-block__value_for_contract-amount">4 467 313</span>
+                <svg class="counter-block__svg" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="counter-block__svg-path" d="M11.6774 12.84C20.1074 12.84 20.1074 0.899999 11.6774 0.899999H2.79742V8.64H0.487422V12.84H2.79742V14.13H0.487422V18.33H2.79742V21H7.74742V18.33H14.9174V14.13H7.74742V12.84H11.6774ZM11.2274 5.7C13.3574 5.7 13.3274 8.64 11.2274 8.64H7.74742V5.7H11.2274Z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="page__counter-block page__counter-block_monthly-payment">
+            <div class="counter-block">
+              <h2 class="counter-block__title">Ежемесячный платеж от</h2>
+              <div class="counter-block__content"><span class="counter-block__value js-counter-block__value js-counter-block__value_for_monthly-payment">114 455</span>
+                <svg class="counter-block__svg" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="counter-block__svg-path" d="M11.6774 12.84C20.1074 12.84 20.1074 0.899999 11.6774 0.899999H2.79742V8.64H0.487422V12.84H2.79742V14.13H0.487422V18.33H2.79742V21H7.74742V18.33H14.9174V14.13H7.74742V12.84H11.6774ZM11.2274 5.7C13.3574 5.7 13.3274 8.64 11.2274 8.64H7.74742V5.7H11.2274Z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="page__button">
+            <button class="button" type="submit">Оставить заявку</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
