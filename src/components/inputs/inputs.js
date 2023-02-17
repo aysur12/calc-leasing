@@ -21,15 +21,14 @@ const labelCreditAmount = document.querySelector(
   '.js-inputs__label_for_credit-amount'
 );
 
-window.addEventListener('resize', function () {
-  if (window.innerWidth <= 425) {
+window.addEventListener('resize',() => {
+  if (window.innerWidth <= 767) {
     labelCreditAmount.textContent = 'Желаемая сумма кредита';
   } else {
     labelCreditAmount.textContent = 'Стоимость автомобиля';
   }
 });
 
-validateNumber(vehiclePriceInput, vehiclePriceSlider);
 validateDownPaymentInput(
   downPaymentInput,
   vehiclePriceInput,
@@ -48,9 +47,6 @@ vehiclePriceInput.addEventListener('change', () => {
   calculateContractAmount(downPaymentInput, leasingTermInput);
 });
 
-vehiclePriceInput.addEventListener('input', () => {
-  validateNumber(vehiclePriceInput, vehiclePriceSlider, 1500000, 10000000);
-});
 
 vehiclePriceSlider.addEventListener('input', () => {
   updateNumber(vehiclePriceSlider, vehiclePriceInput);
